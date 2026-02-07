@@ -1,6 +1,6 @@
 - name: Deploy Node.js app to production
   hosts: all
-  become: no
+  become: yes
   vars:
     git_ref: "{{ lookup('env', 'GIT_REF') | default('main') }}"
   roles:
