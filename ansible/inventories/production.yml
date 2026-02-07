@@ -1,0 +1,8 @@
+all:
+  hosts:
+    web1:
+      ansible_host: verification-awarded-roll-millions.trycloudflare.com 
+      ansible_port: 22
+      ansible_user: deploy
+      ansible_python_interpreter: /usr/bin/python3
+      ansible_ssh_common_args: '-o StrictHostKeyChecking=no -o ProxyCommand="cloudflared access ssh --hostname %h"'

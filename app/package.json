@@ -1,0 +1,9 @@
+{
+  "name": "myapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Sin tests por ahora\" && exit 0",
+    "start": "node index.js"
+  }
+}

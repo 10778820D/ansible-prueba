@@ -1,0 +1,15 @@
+[Unit]
+Description=My Node.js App
+After=network.target
+
+[Service]
+User=deploy
+Group=deploy
+# Aquí es donde debe entrar antes de arrancar
+WorkingDirectory=/home/deploy/apps/myapp/app
+# Y aquí la ruta completa al archivo index.js
+ExecStart=/usr/bin/node /home/deploy/apps/myapp/app/index.js
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

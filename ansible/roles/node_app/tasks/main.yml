@@ -1,0 +1,17 @@
+- name: Ensure git is present
+  apt:
+    name: git
+    state: present
+  become: yes
+
+- name: Ensure nodejs and npm are installed
+  apt:
+    name:
+      - nodejs
+      - npm
+    state: present
+    update_cache: no
+  become: yes
+
+- name: Include deploy tasks
+  import_tasks: deploy.yml
